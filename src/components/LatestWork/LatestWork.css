@@ -1,0 +1,187 @@
+/* Main container */
+.latest-work {
+  background: black;
+  color: white;
+  padding: 3rem 1rem;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Section title */
+.latest-work h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Scrollable category buttons */
+.category-buttons {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  overflow-x: auto;
+  padding: 0.5rem 0.25rem;
+  -webkit-overflow-scrolling: touch;
+  white-space: nowrap;
+  justify-content: flex-start;
+  scrollbar-width: thin; /* Firefox: thin scrollbar */
+  scrollbar-color: rgba(255, 165, 0, 0.7) rgba(255, 255, 255, 0.1); /* thumb, track */
+}
+
+.category-buttons::-webkit-scrollbar {
+  height: 6px;
+}
+
+.category-buttons::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.category-buttons::-webkit-scrollbar-thumb {
+  background: rgba(255, 165, 0, 0.7);
+  border-radius: 3px;
+}
+
+/* Category buttons */
+.category-buttons button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.category-buttons button.active {
+  color: orange;
+  border-bottom: 2px solid orange;
+}
+
+/* Image grid: centered layout */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+  justify-content: center; /* center the grid itself */
+  justify-items: center; /* center items in their cells */
+  grid-auto-rows: 300px; /* uniform row height */
+  align-items: center; /* vertical centering in cells */
+}
+
+/* Gallery images */
+.gallery-img {
+  width: 250px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(255, 165, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+  transform: scale(1.03);
+}
+
+/* Lightbox modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+.close-btn {
+  position: fixed;
+  top: 30px;
+  right: 40px;
+  font-size: 2rem;
+  color: white;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.instagram-icon {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.glow-icon {
+  font-size: 2.5rem;
+  color: #e1306c;
+  animation: glow 1.5s infinite alternate;
+  transition: transform 0.3s;
+}
+
+.glow-icon:hover {
+  transform: scale(1.1);
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #e1306c, 0 0 10px #e1306c;
+  }
+  to {
+    text-shadow: 0 0 20px #e1306c, 0 0 30px #ff5d9e;
+  }
+}
+
+/* Desktop-specific scrollbar enhancements */
+@media (min-width: 768px) {
+  .category-buttons {
+    justify-content: center;
+    scrollbar-width: auto;
+  }
+  .category-buttons::-webkit-scrollbar {
+    height: 8px;
+  }
+  .category-buttons::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+  .category-buttons::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #ffb347, #ffcc33);
+    border-radius: 4px;
+  }
+  .category-buttons::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #ffcc33, #ffb347);
+  }
+
+  /* Slight adjustments for larger screens */
+  .image-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  .gallery-img {
+    height: 250px;
+    width: 200px;
+  }
+
+  .close-btn {
+    top: 20px;
+    right: 20px;
+    font-size: 1.5rem;
+  }
+}

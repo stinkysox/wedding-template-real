@@ -1,0 +1,59 @@
+.teasers-section {
+  background-color: black;
+  padding: 3rem 1rem;
+  color: white;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.teasers-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+  padding: 20px;
+}
+
+.video-container {
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.youtube-icon {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.glow-youtube {
+  font-size: 2.5rem;
+  color: #ff0000;
+  animation: glowYT 1.5s infinite alternate;
+  transition: transform 0.3s;
+}
+
+.glow-youtube:hover {
+  transform: scale(1.1);
+}
+
+@keyframes glowYT {
+  from {
+    text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000;
+  }
+  to {
+    text-shadow: 0 0 20px #ff0000, 0 0 30px #ff4c4c;
+  }
+}
