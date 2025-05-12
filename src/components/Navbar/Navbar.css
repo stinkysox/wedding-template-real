@@ -6,6 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-family: "Cedarville Cursive", cursive;
 }
 
 .navbar-socials {
@@ -32,4 +33,19 @@
 /* Facebook hover color */
 .nav-social-media-icon:hover:nth-child(2) {
   color: #1877f2;
+}
+
+.logo-image {
+  height: 40px;
+}
+
+.navbar-one {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+@media (max-width: 468px) {
+  .navbar h2 {
+    font-size: 17px;
+  }
 }

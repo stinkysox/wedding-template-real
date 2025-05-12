@@ -7,14 +7,15 @@ import { motion } from "framer-motion";
 const Navbar = () => {
   return (
     <section className="navbar">
-      {/* Animate h2 */}
-      <motion.h2
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-      >
-        Wit Photography
-      </motion.h2>
+      <div className="navbar-one">
+        <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          Wit Photography
+        </motion.h2>
+      </div>
 
       {/* Social icons */}
       <div className="navbar-socials">

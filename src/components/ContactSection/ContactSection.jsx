@@ -1,19 +1,31 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { MdEmail } from "react-icons/md";
 import { FaYoutube, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import "./ContactSection.css";
 
 const ContactSection = () => {
+  const navigate = useNavigate();
+
+  const handleBookNow = () => {
+    navigate("/form");
+  };
+
   return (
     <div className="contact-container">
       <h2 className="contact-heading">
-        Lets talk about your <br /> event!
+        Let’s talk about your <br /> event!
       </h2>
 
-      <button className="book-now-btn">Book Now</button>
+      <button className="book-now-btn" onClick={handleBookNow}>
+        Book Now
+      </button>
 
       <div className="icon-grid">
-        <a href="mailto:booknow@vjrishiphotography" className="icon-btn email">
+        <a
+          href="mailto:booknow@vjrishiphotography.com"
+          className="icon-btn email"
+        >
           <MdEmail size={30} />
         </a>
         <a href="#" className="icon-btn youtube">
@@ -27,8 +39,8 @@ const ContactSection = () => {
         </a>
       </div>
 
-      <p className="contact-text">booknow@vjrishiphotography</p>
-      <p className="contact-text">+91 7659988244</p>
+      <p className="contact-text">booknow@witphotography.com</p>
+      <p className="contact-text">+91 7032066078</p>
     </div>
   );
 };
