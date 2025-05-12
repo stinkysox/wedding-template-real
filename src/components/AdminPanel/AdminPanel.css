@@ -6,7 +6,7 @@
   font-family: "Poppins", sans-serif;
 }
 
-h2 {
+.admin-panel-title {
   text-align: center;
   margin-bottom: 20px;
   color: #ffa500; /* Orange color for header */
@@ -91,7 +91,8 @@ h4 {
 
 .image-item img {
   width: 100%;
-  height: auto;
+  height: 200px; /* Fixed height for uniformity */
+  object-fit: cover; /* Ensures the image scales proportionally */
   border-radius: 8px;
 }
 
@@ -201,11 +202,4 @@ select {
 
 .navigate-btn:hover {
   background-color: #e65c00;
-}
-
-.image-item img {
-  width: 100%;
-  height: 200px; /* Fixed height */
-  object-fit: cover; /* Ensures the image scales proportionally within the given size */
-  border-radius: 8px;
 }

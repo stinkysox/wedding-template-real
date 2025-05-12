@@ -15,26 +15,50 @@ const initialCategories = {
   Prewedding: [],
 };
 
+// Convert a standard YouTube URL to an embeddable URL
+const convertToEmbedUrl = (url) => {
+  try {
+    const urlObj = new URL(url);
+    const videoId = urlObj.searchParams.get("v");
+    if (videoId) {
+      return `https://www.youtube.com/embed/${videoId}`;
+    } else if (url.includes("youtu.be/")) {
+      const id = url.split("youtu.be/")[1];
+      return `https://www.youtube.com/embed/${id}`;
+    }
+    return null;
+  } catch (err) {
+    return null;
+  }
+};
+
 const ImageProvider = ({ children }) => {
   const [images, setImages] = useState(() => {
     const storedImages = localStorage.getItem("gallery-images");
     const parsed = storedImages ? JSON.parse(storedImages) : {};
 
-    // Ensure all categories from initialCategories exist
     const completeCategories = { ...initialCategories };
     for (const key in parsed) {
       completeCategories[key] = parsed[key];
     }
-
     return completeCategories;
   });
 
-  // Save images to localStorage when they change
+  const [videos, setVideos] = useState(() => {
+    const storedVideos = localStorage.getItem("gallery-videos");
+    return storedVideos ? JSON.parse(storedVideos) : [];
+  });
+
+  // Sync localStorage
   useEffect(() => {
     localStorage.setItem("gallery-images", JSON.stringify(images));
   }, [images]);
 
-  // Add a new image to a specific category
+  useEffect(() => {
+    localStorage.setItem("gallery-videos", JSON.stringify(videos));
+  }, [videos]);
+
+  // Image Functions
   const addImage = (imageUrl, category) => {
     if (!images.hasOwnProperty(category)) {
       alert("Invalid category selected.");
@@ -56,7 +80,6 @@ const ImageProvider = ({ children }) => {
     });
   };
 
-  // Remove an image by its ID from its category
   const removeImage = (id, category) => {
     setImages((prevImages) => {
       const updatedCategoryImages = prevImages[category].filter(
@@ -69,8 +92,25 @@ const ImageProvider = ({ children }) => {
     });
   };
 
+  // Video Functions
+  const addVideo = (youtubeUrl) => {
+    const embedUrl = convertToEmbedUrl(youtubeUrl);
+    if (!embedUrl) {
+      alert("Invalid YouTube URL.");
+      return;
+    }
+
+    setVideos((prev) => [...prev, embedUrl]);
+  };
+
+  const removeVideo = (embedUrl) => {
+    setVideos((prev) => prev.filter((url) => url !== embedUrl));
+  };
+
   return (
-    <ImageContext.Provider value={{ images, addImage, removeImage }}>
+    <ImageContext.Provider
+      value={{ images, videos, addImage, removeImage, addVideo, removeVideo }}
+    >
       {children}
     </ImageContext.Provider>
   );

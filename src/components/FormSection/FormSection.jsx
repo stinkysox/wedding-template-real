@@ -39,55 +39,56 @@ Excited to connect with you!`;
   };
 
   return (
-    <form className="form-container" onSubmit={handleSubmit}>
+    <>
       <Navbar />
+      <form className="form-container" onSubmit={handleSubmit}>
+        <input
+          name="fullName"
+          placeholder="Your Full Name *"
+          required
+          onChange={handleChange}
+        />
+        <input
+          name="email"
+          type="email"
+          placeholder="Email Address *"
+          required
+          onChange={handleChange}
+        />
+        <input
+          name="phone"
+          type="tel"
+          placeholder="Phone Number *"
+          required
+          onChange={handleChange}
+        />
+        <input
+          name="date"
+          type="date"
+          placeholder="Event Date"
+          onChange={handleChange}
+        />
+        <input
+          name="location"
+          placeholder="Event Location"
+          onChange={handleChange}
+        />
+        <textarea
+          name="message"
+          placeholder="Do you want to say something?"
+          onChange={handleChange}
+        />
+        <input
+          name="social"
+          placeholder="Share your social media profile"
+          onChange={handleChange}
+        />
 
-      <input
-        name="fullName"
-        placeholder="Your Full Name *"
-        required
-        onChange={handleChange}
-      />
-      <input
-        name="email"
-        type="email"
-        placeholder="Email Address *"
-        required
-        onChange={handleChange}
-      />
-      <input
-        name="phone"
-        type="tel"
-        placeholder="Phone Number *"
-        required
-        onChange={handleChange}
-      />
-      <input
-        name="date"
-        type="date"
-        placeholder="Event Date"
-        onChange={handleChange}
-      />
-      <input
-        name="location"
-        placeholder="Event Location"
-        onChange={handleChange}
-      />
-      <textarea
-        name="message"
-        placeholder="Do you want to say something?"
-        onChange={handleChange}
-      />
-      <input
-        name="social"
-        placeholder="Share your social media profile"
-        onChange={handleChange}
-      />
-
-      <button className="submit-btn" type="submit">
-        Send via WhatsApp
-      </button>
-    </form>
+        <button className="submit-btn" type="submit">
+          Send via WhatsApp
+        </button>
+      </form>
+    </>
   );
 };
 

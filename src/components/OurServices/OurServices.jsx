@@ -33,7 +33,7 @@ const OurServices = () => {
   };
 
   return (
-    <div className="our-services">
+    <div className="our-services" id="services">
       <p className="subheading">OUR SERVICES</p>
       <h2 className="main-heading">
         Where every <span>picture</span> <br /> tells a story
