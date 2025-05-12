@@ -22,19 +22,31 @@ const ContactSection = () => {
       </button>
 
       <div className="icon-grid">
-        <a
-          href="mailto:booknow@vjrishiphotography.com"
-          className="icon-btn email"
-        >
+        <a href="mailto:booknow@witphotography.com" className="icon-btn email">
           <MdEmail size={30} />
         </a>
-        <a href="#" className="icon-btn youtube">
+        <a
+          href="https://www.youtube.com"
+          className="icon-btn youtube"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FaYoutube size={30} />
         </a>
-        <a href="#" className="icon-btn instagram">
+        <a
+          href="https://www.instagram.com"
+          className="icon-btn instagram"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FaInstagram size={30} />
         </a>
-        <a href="#" className="icon-btn whatsapp">
+        <a
+          href="https://wa.me/"
+          className="icon-btn whatsapp"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FaWhatsapp size={30} />
         </a>
       </div>

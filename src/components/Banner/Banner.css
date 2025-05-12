@@ -52,6 +52,10 @@
   color: black;
 }
 
+.highlight {
+  color: orange; /* hot pink - you can change to another appropriate color if needed */
+}
+
 @media screen and (max-width: 468px) {
   .banner p {
     font-size: 16px;

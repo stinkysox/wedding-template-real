@@ -9,6 +9,7 @@ import LatestWork from "../../components/LatestWork/LatestWork";
 import TeasersSection from "../../components/TeasersSection/TeasersSection";
 import Testimonials from "../../components/Testimonials/Testimonials";
 import ContactSection from "../../components/ContactSection/ContactSection";
+import ScrollButton from "../../components/ScrollButton/ScrollButton";
 const Home = () => {
   return (
     <section className="home-container">
@@ -21,6 +22,7 @@ const Home = () => {
       <TeasersSection />
       <Testimonials />
       <ContactSection />
+      <ScrollButton />
     </section>
   );
 };
