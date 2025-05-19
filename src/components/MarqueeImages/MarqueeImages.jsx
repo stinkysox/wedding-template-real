@@ -3,83 +3,68 @@ import Marquee from "react-fast-marquee";
 import "./MarqueeImages.css";
 
 const MarqueeImages = () => {
-  // Define images directly in the component
   const categories = {
     "Right Images": [
       {
-        imageUrl:
-          "https://i.pinimg.com/736x/24/3a/f3/243af3f924ab6846b1f2095af85bfed6.jpg",
-        category: "Right Images",
+        imageUrl: "https://i.postimg.cc/3NNvp2jt/VSK02380.jpg",
       },
       {
-        imageUrl:
-          "https://i.pinimg.com/736x/f2/f9/4b/f2f94b92e1048b45b372db321e042bce.jpg",
-        category: "Right Images",
+        imageUrl: "https://i.postimg.cc/3wrS6c3N/0-20.jpg",
       },
       {
-        imageUrl:
-          "https://i.pinimg.com/736x/f1/0f/22/f10f22327238583e66859a6514e4d62e.jpg",
-        category: "Right Images",
+        imageUrl: "https://i.postimg.cc/fTKYFTy7/0-27.jpg",
       },
       {
-        imageUrl:
-          "https://i.pinimg.com/736x/b7/43/ef/b743ef4649354cd5a45fcfe0f0609afb.jpg",
-        category: "Right Images",
+        imageUrl: "https://i.postimg.cc/rFnKxdzH/0-57.jpg",
       },
       {
-        imageUrl:
-          "https://i.pinimg.com/736x/05/38/c2/0538c243c1d3599fd7c37f81fdae7384.jpg",
-        category: "Right Images",
+        imageUrl: "https://i.postimg.cc/DwxdWyKf/0-2.jpg",
       },
     ],
     "Left Images": [
       {
-        imageUrl:
-          "https://i.pinimg.com/736x/50/36/08/50360859203a51e5de8e30e934ab856d.jpg",
-        category: "Left Images",
+        imageUrl: "https://i.postimg.cc/pT6dw48B/VSK01839.jpg",
       },
       {
-        imageUrl:
-          "https://i.pinimg.com/736x/55/a0/42/55a042ffebaf73b4367b0e78f3c5b08e.jpg",
-        category: "Left Images",
+        imageUrl: "https://i.postimg.cc/43F50482/0-13.jpg",
       },
       {
-        imageUrl:
-          "https://i.pinimg.com/736x/32/de/7c/32de7c6dea7a32733bbc4792dcde506e.jpg",
-        category: "Left Images",
+        imageUrl: "https://i.postimg.cc/5yJF7ZMk/0-11.jpg",
       },
       {
-        imageUrl:
-          "https://i.pinimg.com/736x/5b/c5/e1/5bc5e1d1222c8c1d1aee9094140ba0ac.jpg",
-        category: "Left Images",
+        imageUrl: "https://i.postimg.cc/HxdpfHV5/0-2-1.jpg",
       },
       {
-        imageUrl:
-          "https://i.pinimg.com/736x/58/e7/9f/58e79f5f30226747fdb75e3db34d9a4a.jpg",
-        category: "Left Images",
+        imageUrl: "https://i.postimg.cc/Gtz9MtKH/0-8.jpg",
       },
     ],
   };
 
-  const rightArrowImages = categories["Right Images"];
-  const leftArrowImages = categories["Left Images"];
+  const rightImages = categories["Right Images"];
+  const leftImages = categories["Left Images"];
 
+  // Generate empty placeholders if no images present
   const generateEmptyImages = (count = 5) =>
     Array.from({ length: count }, (_, i) => (
       <div key={`empty-${i}`} className="empty-img" />
     ));
 
-  const renderImages = (imageArray, direction) => {
-    return imageArray.length > 0
-      ? imageArray.map((image, idx) => (
-          <img
-            key={`${direction}-${idx}`}
-            className="marquee-img"
-            src={image.imageUrl}
-            alt={`${direction === "right" ? "Right" : "Left"} Slide ${idx + 1}`}
-          />
-        ))
-      : generateEmptyImages();
+  // Render images with lazy loading & descriptive alt text
+  const renderImages = (imagesArray, direction) => {
+    if (!imagesArray || imagesArray.length === 0) return generateEmptyImages();
+
+    return imagesArray.map((imgObj, idx) => (
+      <img
+        key={`${direction}-${idx}`}
+        className="marquee-img"
+        src={imgObj.imageUrl}
+        alt={`${direction === "right" ? "Right" : "Left"} Slide Image ${
+          idx + 1
+        }`}
+        loading="lazy"
+        draggable={false}
+      />
+    ));
   };
 
   return (
@@ -91,7 +76,7 @@ const MarqueeImages = () => {
           pauseOnHover={false}
           direction="right"
         >
-          {renderImages(rightArrowImages, "right")}
+          {renderImages(rightImages, "right")}
         </Marquee>
       </div>
 
@@ -102,7 +87,7 @@ const MarqueeImages = () => {
           pauseOnHover={false}
           direction="left"
         >
-          {renderImages(leftArrowImages, "left")}
+          {renderImages(leftImages, "left")}
         </Marquee>
       </div>
     </>

@@ -5,19 +5,13 @@ import "./OurServices.css";
 const services = [
   {
     title: "Wedding Photography",
-    image:
-      "https://i.pinimg.com/736x/19/34/09/193409a9e82c90cabe987cc8d3270605.jpg",
+    image: "https://i.postimg.cc/jd90NNYC/VNU04514.jpg",
   },
   {
     title: "Pre-wedding Photography",
-    image:
-      "https://i.pinimg.com/736x/40/1d/fd/401dfddc2f315f193c93b60689c668f0.jpg",
+    image: "https://i.postimg.cc/Jhv1zJ6N/1-2.jpg",
   },
-  {
-    title: "Fashion Photography",
-    image:
-      "https://i.pinimg.com/736x/c0/8a/6b/c08a6b93db05ebdbf4724422f1b63ca8.jpg",
-  },
+
   {
     title: "Baby Shoot",
     image:

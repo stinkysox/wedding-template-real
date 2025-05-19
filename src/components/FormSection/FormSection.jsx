@@ -35,7 +35,7 @@ I'm ${formData.fullName}.
 Excited to connect with you!`;
 
     const encodedText = encodeURIComponent(text);
-    window.open(`https://wa.me/917032066078?text=${encodedText}`, "_blank");
+    window.open(`https://wa.me/919535440990?text=${encodedText}`, "_blank");
   };
 
   return (

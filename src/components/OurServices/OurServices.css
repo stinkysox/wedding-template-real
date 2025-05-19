@@ -1,5 +1,5 @@
 .our-services {
-  background: black;
+  background: #921a40;
   color: white;
   text-align: center;
   padding: 4rem 1rem;
@@ -21,7 +21,7 @@
 }
 
 .main-heading span {
-  color: orange;
+  color: #90d1ca;
 }
 
 .services-grid {

@@ -20,10 +20,14 @@ const Banner = () => {
   return (
     <div className="banner">
       <p className="banner-text">
-        We don’t just photograph people we capture connections,{" "}
-        <span className="highlight">joy</span>, and the{" "}
+        Pramod Photography — <strong>The Wedding Storyteller</strong>. Capturing
+        love through cinematic wedding films and timeless photography. From
+        planning to execution, we turn your big day into a beautiful story —
+        anywhere in the world. We don’t just photograph people, we capture
+        connections, <span className="highlight">joy</span>, and the{" "}
         <span className="highlight">warmth</span> of being together.
       </p>
+
       <div className="banner-button-container">
         <button onClick={handleBookNowClick}>Book Now</button>
         <button onClick={handleLearnMoreClick}>Learn More</button>

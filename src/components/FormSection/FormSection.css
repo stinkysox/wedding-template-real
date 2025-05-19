@@ -4,7 +4,6 @@
   padding: 2rem;
   max-width: 100%;
   margin: auto;
-  box-shadow: 0 0 20px rgba(255, 165, 0, 0.4);
   display: grid;
   gap: 1rem;
   grid-template-columns: 1fr 1fr;
@@ -35,15 +34,15 @@ textarea {
 input:focus,
 textarea:focus {
   outline: none;
-  border-bottom-color: orange;
+  border-bottom-color: #90d1ca;
 }
 
 .submit-btn {
-  background-color: orange;
+  background-color: #90d1ca;
   border: none;
   padding: 0.9rem;
   border-radius: 6px;
-  color: black;
+  color: white;
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;

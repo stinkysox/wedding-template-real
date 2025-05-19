@@ -1,7 +1,7 @@
 .marquee-container {
   width: 100%;
   overflow: hidden;
-  background-color: black;
+  background-color: #1b4d3e;
   position: relative;
   padding: 20px 0;
 }

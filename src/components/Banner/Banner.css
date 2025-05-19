@@ -6,13 +6,16 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  font-family: "Bodoni Moda", serif;
 }
 
 .banner p {
   width: 80%;
-  font-size: 22px;
+  font-size: 20px;
   text-align: center;
   font-weight: bold;
+  line-height: 1.8rem;
+  font-weight: normal;
 }
 
 .banner-button-container {
@@ -30,34 +33,34 @@
 }
 
 .banner-button-container button:first-child {
-  background-color: orange;
+  background-color: #90d1ca;
   color: black;
-  border: 2px solid orange;
+  border: 2px solid #90d1ca;
 }
 
 .banner-button-container button:first-child:hover {
   background-color: transparent;
-  color: orange;
+  color: #90d1ca;
 }
 
 /* Second button: outlined yellow with yellow text */
 .banner-button-container button:last-child {
   background-color: transparent;
-  color: orange;
-  border: 2px solid orange;
+  color: #90d1ca;
+  border: 2px solid #90d1ca;
 }
 
 .banner-button-container button:last-child:hover {
-  background-color: orange;
+  background-color: #90d1ca;
   color: black;
 }
 
 .highlight {
-  color: orange; /* hot pink - you can change to another appropriate color if needed */
+  color: #90d1ca; /* hot pink - you can change to another appropriate color if needed */
 }
 
 @media screen and (max-width: 468px) {
   .banner p {
-    font-size: 16px;
+    font-size: 14px;
   }
 }

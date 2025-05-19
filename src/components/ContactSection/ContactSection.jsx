@@ -26,7 +26,7 @@ const ContactSection = () => {
           <MdEmail size={30} />
         </a>
         <a
-          href="https://www.youtube.com"
+          href="https://www.youtube.com/@pramodphotography-xe9gy"
           className="icon-btn youtube"
           target="_blank"
           rel="noopener noreferrer"
@@ -34,7 +34,7 @@ const ContactSection = () => {
           <FaYoutube size={30} />
         </a>
         <a
-          href="https://www.instagram.com"
+          href="https://www.instagram.com/pramod.photogrphy/?igsh=MXVuM2N1eW9qOTgyaw%3D%3D#"
           className="icon-btn instagram"
           target="_blank"
           rel="noopener noreferrer"
@@ -42,7 +42,7 @@ const ContactSection = () => {
           <FaInstagram size={30} />
         </a>
         <a
-          href="https://wa.me/"
+          href="https://wa.me/919535440990"
           className="icon-btn whatsapp"
           target="_blank"
           rel="noopener noreferrer"
@@ -51,8 +51,7 @@ const ContactSection = () => {
         </a>
       </div>
 
-      <p className="contact-text">booknow@witphotography.com</p>
-      <p className="contact-text">+91 7032066078</p>
+      <p className="contact-text">+91 95354 40990</p>
     </div>
   );
 };

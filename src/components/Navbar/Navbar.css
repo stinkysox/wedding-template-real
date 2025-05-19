@@ -1,6 +1,6 @@
 .navbar {
   width: 100%;
-  background-color: black;
+  background-color: #5a7177;
   padding: 20px 30px;
   color: white;
   display: flex;
@@ -12,6 +12,11 @@
 .navbar-socials {
   display: flex;
   gap: 20px;
+}
+
+.navbar-logo {
+  height: 90px;
+  border-radius: 20px;
 }
 
 .navbar h2 {

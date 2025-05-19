@@ -8,13 +8,13 @@ const Navbar = () => {
   return (
     <section className="navbar">
       <div className="navbar-one">
-        <motion.h2
+        <motion.img
+          src="https://i.postimg.cc/SNGrcGpG/Untitled-design.jpg"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-        >
-          Wit Photography
-        </motion.h2>
+          className="navbar-logo"
+        />
       </div>
 
       {/* Social icons */}
@@ -29,7 +29,13 @@ const Navbar = () => {
             transition: { duration: 0.4 },
           }}
         >
-          <IoLogoInstagram />
+          <a
+            href="https://www.instagram.com/pramod.photogrphy/?igsh=MXVuM2N1eW9qOTgyaw%3D%3D#"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <IoLogoInstagram />
+          </a>
         </motion.div>
 
         <motion.div
@@ -42,7 +48,7 @@ const Navbar = () => {
             transition: { duration: 0.4 },
           }}
         >
-          <FaFacebookF />
+          {/* Facebook icon functionality can go here */}
         </motion.div>
       </div>
     </section>

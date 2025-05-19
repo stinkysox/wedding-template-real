@@ -1,17 +1,20 @@
 import React from "react";
 import "./TeasersSection.css";
 import { FaYoutube } from "react-icons/fa";
-import { useImageContext } from "../../Context/ImagesContext";
 
 const TeasersSection = () => {
-  const { videos } = useImageContext();
+  // Dummy embedded YouTube video URLs
+  const videos = [
+    "https://www.youtube.com/embed/oGtEyDZWt6A",
+    "https://www.youtube.com/embed/CJ_pP5LzaNM",
+  ];
 
   return (
     <div className="teasers-section">
       <h2>Teasers</h2>
 
       {videos.length === 0 ? (
-        <p>No videos to show</p> // Display message if there are no videos
+        <p>No videos to show</p>
       ) : (
         <div className="video-grid">
           {videos.map((src, index) => (
@@ -30,7 +33,7 @@ const TeasersSection = () => {
 
       <div className="youtube-icon">
         <a
-          href="https://www.youtube.com/@your_channel"
+          href="https://www.youtube.com/@pramodphotography-xe9gy"
           target="_blank"
           rel="noopener noreferrer"
         >

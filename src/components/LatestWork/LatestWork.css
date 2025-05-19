@@ -1,6 +1,6 @@
 /* Main container */
 .latest-work {
-  background: black;
+  background: #533b4d;
   color: white;
   padding: 3rem 1rem;
   text-align: center;
@@ -124,6 +124,24 @@
 .instagram-icon {
   display: flex;
   justify-content: center;
+  margin-top: 2rem;
+}
+
+.glow-icon {
+  font-size: 2.5rem;
+  color: #e1306c;
+  animation: glow 1.5s infinite alternate;
+  transition: transform 0.3s;
+}
+
+.glow-icon:hover {
+  transform: scale(1.1);
+}
+
+.instagram-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 2rem;
 }
 
