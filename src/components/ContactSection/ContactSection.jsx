@@ -22,7 +22,10 @@ const ContactSection = () => {
       </button>
 
       <div className="icon-grid">
-        <a href="mailto:booknow@witphotography.com" className="icon-btn email">
+        <a
+          href="mailto:pramodphotography641@gmail.com"
+          className="icon-btn email"
+        >
           <MdEmail size={30} />
         </a>
         <a
